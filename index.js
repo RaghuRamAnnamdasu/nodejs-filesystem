@@ -6,7 +6,7 @@ const app = express();
 
 dotenv.config();
 
-const port = process.env.port;
+const port = process.env.PORT || 5000;
 
 
 
