@@ -8,8 +8,8 @@ dotenv.config();
 
 const port = process.env.port;
 
-const fileName = `${new Date().toLocaleDateString("es-CL")} T${new Date().getHours()}(Hrs)-${new Date().getMinutes()}(Min)-${new Date().getSeconds()}(Sec)`;
-const timeStamp = new Date().toString();
+
+
 
 
 app.get("/",(req,res)=>{
@@ -19,6 +19,8 @@ app.get("/",(req,res)=>{
 })
 
 app.get("/createFile",(req,res)=>{
+  const fileName = `${new Date().toLocaleDateString("es-CL")} T${new Date().getHours()}(Hrs)-${new Date().getMinutes()}(Min)-${new Date().getSeconds()}(Sec)`;
+  const timeStamp = new Date().toString();
   fs.writeFile(`./backup/${fileName}.txt`,timeStamp,(err)=>{
     if(err){
       console.log(err);
