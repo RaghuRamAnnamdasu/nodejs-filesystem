@@ -9,12 +9,9 @@ dotenv.config();
 const port = process.env.PORT || 5000;
 
 
-
-
-
 app.get("/",(req,res)=>{
   res.send(
-    "Create File & Retrieve Files in Folder. </br></br></br>Hi EveryOne, this is an illustration to create a file in backup folder and retrieve files from backup folder.</br></br>When ever we go to URL localhost:5000/createFile every time a file is created with file name as current date and time and content as Timestamp.</br></br>When ever we go to URL localhost:5000/retrieveFile we can get the list of files in backup folder."
+    "Create File & Retrieve Files in Folder. </br></br></br>Hi EveryOne, this is an illustration to create a file in backup folder and retrieve files from backup folder.</br></br>When ever we go to URL localhost:5000/createFile every time a file is created with file name as current date and time and content as Timestamp.</br></br>When ever we go to URL localhost:5000/retreiveFile we can get the list of files in backup folder."
   );
 })
 
